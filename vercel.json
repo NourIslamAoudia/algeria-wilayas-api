@@ -12,11 +12,6 @@
       "dest": "/app.js"
     }
   ],
-  "functions": {
-    "app.js": {
-      "maxDuration": 10
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   }

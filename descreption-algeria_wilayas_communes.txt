@@ -1,0 +1,27 @@
+Nom du fichier : algeria_wilayas_communes.json
+Format : JSON
+Encodage : UTF-8
+Contenu :
+
+Liste complète des 58 wilayas (départements) algériennes avec leurs codes et noms.
+
+Toutes les communes de chaque wilaya, classées par ordre alphabétique.
+
+Structure standardisée :
+
+json
+{
+  "wilaya_code": [1-58],
+  "wilaya_name": "Nom de la wilaya",
+  "communes": ["Liste", "des", "communes"]
+}
+Source : Basé sur le découpage administratif officiel de l'Algérie (ONS).
+Usage :
+
+Référence géographique pour applications, sites web, ou analyses.
+
+Cartographie, formulaires de sélection (wilaya/commune).
+
+Mise à jour facile via ajout/modification d'entrées JSON.
+
+Note : Vérifier périodiquement les mises à jour officielles (ex. : création de nouvelles communes).

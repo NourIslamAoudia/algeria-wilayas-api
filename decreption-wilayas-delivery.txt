@@ -1,0 +1,7 @@
+| Champ      | Type    | Description                                                                     |
+| ---------- | ------- | ------------------------------------------------------------------------------- |
+| `code`     | string  | Code à deux chiffres de la wilaya (ex. `"16"`)                                  |
+| `name`     | string  | Nom de la wilaya (ex. `"Alger"`)                                                |
+| `domicile` | integer | Tarif de livraison à domicile (DA)                                              |
+| `bureau`   | integer | Tarif pour retrait au bureau/point relais (DA), `0` = gratuit ou non disponible |
+| `delai`    | string  | Délai estimé de livraison (ex. `"1‑3 jours"`)                                   |

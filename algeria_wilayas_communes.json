@@ -1,0 +1,292 @@
+[
+    {
+        "wilaya_code": 1,
+        "wilaya_name": "Adrar",
+        "communes": ["Adrar", "Tamest", "Reggane", "In Zghmir", "Tit", "Ksar Kaddour", "Zaouiet Kounta", "Aoulef", "Timokten", "Tamentit", "Fenoughil", "Tinerkouk", "Deldoul", "Sali", "Akabli", "Metarfa", "Ouled Ahmed Timmi", "Bouda", "Aougrout", "Talmine", "Ouled Saïd", "Timiaouine"]
+    },
+    {
+        "wilaya_code": 2,
+        "wilaya_name": "Chlef",
+        "communes": ["Chlef", "Tenes", "Benairia", "El Karimia", "Tadjna", "Taougrite", "Herenfa", "Oued Fodda", "Boukadir", "Beni Haoua", "Sobha", "El Marsa", "Ouled Fares", "Oussedik", "Zeboudja", "Oum Drou", "Chettia", "Sendjas", "El Hadjadj", "Labiod Medjadja", "Oued Sly", "Abou El Hassen", "Talassa", "Harchoun", "Beni Rached", "Ouled Abbes", "Bouzghaia", "Ain Merane", "El Marssa"]
+    },
+    {
+        "wilaya_code": 3,
+        "wilaya_name": "Laghouat",
+        "communes": ["Laghouat", "Ksar El Hirane", "Benacer Ben Chohra", "Hassi R'Mel", "Ain Madhi", "Tadjmout", "Hassi Delaa", "Ain Sidi Ali", "Brida", "El Ghicha", "Gueltat Sidi Saad", "Aflou", "Oued Morra", "Tadjrouna", "Sebgag", "Taouiala", "Sidi Makhlouf", "Hadj Mechri", "El Assafia", "Kheneg", "Sidi Bouzid", "Bennasser Benchohra"]
+    },
+    {
+        "wilaya_code": 4,
+        "wilaya_name": "Oum El Bouaghi",
+        "communes": ["Oum El Bouaghi", "Ain Beida", "Ain M'lila", "F'Kirina", "Sigus", "El Amiria", "Berriche", "Ouled Hamla", "El Belala", "Ain Babouche", "Ain Zitoun", "El Djazia", "Ain Diss", "El Fedjoudj", "Ouled Zouai", "Bir Chouhada", "Ksar Sbahi", "Meskiana", "Ain Kercha", "El Harmilia", "Rahia", "Ouled Gacem", "El Aouinet", "Souk Naamane", "Zorg", "El Rahmouni"]
+    },
+    {
+        "wilaya_code": 5,
+        "wilaya_name": "Batna",
+        "communes": ["Batna", "Merouana", "Seriana", "Menaa", "El Madher", "Tazoult", "N'Gaous", "Guigba", "Inoughissen", "Ouyoun El Assafir", "Djerma", "Boumagueur", "Bitam", "Metkaouak", "Arris", "Kimmel", "Ain Yagout", "Ouled Selam", "Bouzina", "Chemora", "Ouled Ammar", "Lazrou", "Boumia", "Timgad", "Ras El Aioun", "Chir", "Fesdis", "Zanat El Beida", "Talkhamt", "Ain Touta", "Ouled Fadel", "T'kout", "Ain Djasser", "Ouled Si Slimane", "Tilatou", "Djemorah"]
+    },
+    {
+        "wilaya_code": 6,
+        "wilaya_name": "Béjaïa",
+        "communes": ["Bejaia", "Amizour", "Feraoun", "Tichy", "Aokas", "Darguina", "Sidi Aich", "Souk El Tenine", "Toudja", "Beni Maouche", "Ouzellaguen", "Amalou", "Ighil Ali", "Adekar", "Akbou", "Seddouk", "Tazmalt", "Chemini", "Souk Oufella", "Taskriout", "Tibane", "Bouhamza", "Beni Djellil", "Ait R'zine", "Barbacha", "Boudjellil", "El Kseur", "Melbou", "Timezrit", "Beni Ksila", "Oued Ghir", "Bougie", "Kendira", "Tifra", "Ait Smail", "Sidi Ayad"]
+    },
+    {
+        "wilaya_code": 7,
+        "wilaya_name": "Biskra",
+        "communes": ["Biskra", "Oumache", "Branis", "Chetma", "Ouled Djellal", "Ras El Miaad", "Besbes", "Sidi Khaled", "Doucen", "El Kantara", "Ain Naga", "Zeribet El Oued", "El Feidh", "El Haouch", "M'Chouneche", "El Outaya", "Djemorah", "Tolga", "Lioua", "M'Lili", "Foughala", "Bordj Ben Azzouz", "Meziraa", "Bouchagroune", "Mekhadma", "El Ghrous", "Ourlal", "Sidi Okba"]
+    },
+    {
+        "wilaya_code": 8,
+        "wilaya_name": "Béchar",
+        "communes": ["Bechar", "Ouled Khoudir", "Meridja", "Taghit", "Beni Abbes", "Beni Ikhlef", "Mogheul", "Abadla", "Boukais", "Kerzaz", "El Ouata", "Igli", "Tabelbala", "Tabalbala", "Ouled Sidi Brahim", "Lahmar", "Beni Ounif", "Timoudi"]
+    },
+    {
+        "wilaya_code": 9,
+        "wilaya_name": "Blida",
+        "communes": ["Blida", "Chebli", "Bouinan", "Oued El Alleug", "Ouled Yaich", "Chiffa", "Mouzaia", "Boufarik", "Beni Tamou", "Bougara", "Guerrouaou", "Ain Romana", "Djebabra", "Meftah", "Ouled Slama", "Beni Mered", "Bouarfa", "Ben Khlil", "Soumaa", "Larbaa", "El Affroun", "Chrea", "Beni Saleh", "Oued Djer", "Ben Choud", "Douera", "Birtouta", "Tessala El Merdja"]
+    },
+    {
+        "wilaya_code": 10,
+        "wilaya_name": "Bouira",
+        "communes": ["Bouira", "El Asnam", "Guerrouma", "Souk El Khemis", "Hadjera Zerga", "Ahl El Ksar", "Djebahia", "Ain Bessam", "Bechloul", "Bir Ghbalou", "M'Chedallah", "Bordj Okhriss", "El Hachimia", "Haizer", "Lakhdaria", "Maala", "El Mokrani", "Ouled Rached", "Ain El Hadjar", "Dechmia", "Dirrah", "Bouderbala", "Ain Turk", "Sour El Ghozlane", "Maamora", "Oued El Berdi"]
+    },
+    {
+        "wilaya_code": 11,
+        "wilaya_name": "Tamanrasset",
+        "communes": ["Tamanrasset", "Abalessa", "In Ghar", "In Guezzam", "Idles", "Tazrouk", "Tin Zaouatine", "In Salah", "In Amguel", "Foggaret Ezzaouia"]
+    },
+    {
+        "wilaya_code": 12,
+        "wilaya_name": "Tébessa",
+        "communes": ["Tebessa", "Bir El Ater", "Cheria", "Stah Guentis", "El Aouinet", "El Houidjbet", "Safsaf El Ouesra", "Hammamet", "Negrine", "Bir Dheheb", "El Ogla", "Gorriguer", "Bekkaria", "Boukhadra", "Ouenza", "Morsott", "El Ma Labiodh", "El Meridj", "El Ogla El Malha", "Tlidjene", "Ain Zerga", "El Mezeraa", "Oum Ali", "Toulia", "Ouadi El Argoub"]
+    },
+    {
+        "wilaya_code": 13,
+        "wilaya_name": "Tlemcen",
+        "communes": ["Tlemcen", "Beni Mester", "Ain Tallout", "Remchi", "El Fehoul", "Sabra", "Ghazaouet", "Souani", "Djebala", "El Gor", "Chetouane", "Mansourah", "Beni Snous", "Bab El Assa", "Dar Yaghmouracen", "Fellaoucene", "Azails", "Bensekrane", "Ain Fezza", "Ouled Mimoun", "Amieur", "Ain Youcef", "Zenata", "Beni Boussaid", "Nedroma", "Sidi Djillali", "Hennaya", "Maghnia", "Hammam Boughrara", "Sebdou", "Souahlia", "Terny", "Msirda Fouaga", "Ain Ghoraba", "Chetouane Belaila", "El Aricha"]
+    },
+    {
+        "wilaya_code": 14,
+        "wilaya_name": "Tiaret",
+        "communes": ["Tiaret", "Medroussa", "Ain Bouchekif", "Sidi Ali Mellal", "Ain Deheb", "Sougueur", "Frenda", "Bougara", "Dahmouni", "Rahouia", "Mahdia", "Naima", "Mechraa Safa", "Sidi Hosni", "Rechaiga", "Djillali Ben Amar", "Tousnina", "Faidja", "Sebaine", "Tidda", "Zmalet El Emir Abdelkader", "Medrissa", "Oued Lilli", "Mellakou", "Sidi Abdelghani", "Sebt", "Takhemaret", "Guertoufa", "Sidi Bakhti", "Ain Kermes", "Serghine", "Si Abdelghani"]
+    },
+    {
+        "wilaya_code": 15,
+        "wilaya_name": "Tizi Ouzou",
+        "communes": ["Tizi Ouzou", "Ain El Hammam", "Akbil", "Freha", "Souamaa", "Mechtras", "Irdjen", "Tizi Ghenif", "Maatka", "Draa Ben Khedda", "Ouacif", "Azeffoun", "Yakouren", "Larbaa Nath Irathen", "Tigzirt", "Ait Aggouacha", "Akerrou", "Ait Bouaddou", "Ait Chafaa", "Ait Khellili", "Ait Mahmoud", "Ait Oumalou", "Ait Toudert", "Ait Yahia", "Ait Yahia Moussa", "Assi Youcef", "Azazga", "Beni Aissi", "Beni Douala", "Beni Yenni", "Boghni", "Boudjima", "Draa El Mizan", "Iboudraren", "Idjeur", "Mekla", "Ouadhia", "Ouaguenoun", "Sidi Naamane", "Tizi Rached", "Tizi N'Tleta", "Beni Ziki", "Beni Zmenzer", "Iflissen", "Mizrana", "Timizart", "Tirmitine", "Ait Boumehdi", "Aghrib", "Ain Zaouia", "M'Kira", "Tadmait", "Ait Ouaougrame", "Abi Youcef", "Illoula Oumalou", "Imsouhal", "Ait Aissa Mimoun", "Beni Zmenzer"]
+    },
+    {
+        "wilaya_code": 16,
+        "wilaya_name": "Alger",
+        "communes": ["Alger Centre", "Sidi M'Hamed", "El Madania", "Belouizdad", "Bab El Oued", "Bologhine", "Casbah", "Oued Koriche", "Bir Mourad Raïs", "El Biar", "Bouzareah", "Birkhadem", "El Harrach", "Baraki", "Oued Smar", "Bourouba", "Hussein Dey", "Kouba", "Bachdjerrah", "Dar El Beïda", "Bab Ezzouar", "Bordj El Kiffan", "El Magharia", "Ben Aknoun", "Dely Ibrahim", "El Hammamet", "Rais Hamidou", "Djasr Kasentina", "El Mouradia", "Hydra", "Mohammadia", "Bordj El Bahri", "Aïn Taya", "Bordj Menaïel", "Reghaïa", "Rouïba", "Ouled Chebel", "Sidi Moussa"]
+    },
+    {
+        "wilaya_code": 17,
+        "wilaya_name": "Djelfa",
+        "communes": ["Djelfa", "El Idrissia", "Ain Oussera", "Hassi Bahbah", "Messad", "Birine", "Bouira Lahdab", "Ain El Ibel", "Charef", "Dar Chioukh", "Guettara", "Sidi Ladjel", "Had Sahary", "Ain Chouhada", "Oum Laadham", "Mouilah", "El Guedid", "Zaccar", "Ain Maabed", "Amourah", "Benhar", "Sed Rahal", "Ain Fekka", "Moudjebara", "Hassi Fedoul", "Guernini", "Selmana", "Ain Errich", "M'Liliha", "Douis", "Hassi El Euch"]
+    },
+    {
+        "wilaya_code": 18,
+        "wilaya_name": "Jijel",
+        "communes": ["Jijel", "Erraguene", "El Aouana", "Ziama Mansouriah", "Taher", "Emir Abdelkader", "Chekfa", "Chahna", "El Milia", "Sidi Maarouf", "Settara", "El Ancer", "Kaous", "Ghebala", "Bouraoui Belhadef", "Djmila", "Selma Benziada", "Boussif Ouled Askeur", "El Kennar Nouchfi", "Ouled Yahia Khadrouch", "Ouled Rabah", "Sidi Abdelaziz", "Kheiri Oued Adjoul", "Texenna", "Bordj Taher", "Ouled Attia", "Boudria Beni Yadjis", "Oucize", "Beni Hbibi", "Chekfa", "Ghebala"]
+    },
+    {
+        "wilaya_code": 19,
+        "wilaya_name": "Sétif",
+        "communes": ["Setif", "Ain Arnat", "Beni Aziz", "Ouled Sidi Ahmed", "Bouandas", "Hammam Guergour", "Ain Abessa", "Ain El Kebira", "Ain Oulmane", "Amoucha", "Babor", "Bazer Sakhra", "Beidha Bordj", "Belaa", "Beni Chebana", "Beni Fouda", "Beni Hocine", "Beni Ourtilane", "Bir El Arch", "Bir Haddada", "Bougaa", "Bousselam", "Dehamcha", "Djemila", "Draa Kebila", "El Eulma", "El Ouricia", "Guelal", "Guelta Zerka", "Hamma", "Harbil", "Ksar El Abtal", "Maaouia", "Maoklane", "Mezloug", "Ouled Addouane", "Ouled Tebben", "Ouled Si Ahmed", "Ouled Draou", "Rasfa", "Salah Bey", "Serdj El Ghoul", "Tachouda", "Talaifacene", "Taya", "Tella", "Tizi N'Bechar", "Ain Azel", "Ain Lahdjar", "Ain Legraj", "Ain Roua", "Ain Sebt", "Ain Taghrout", "Azel", "Bouchtata", "Bouhira", "Guidjel", "Hamam Soukhna", "Hammamet", "Maouaklane", "Ouled Sabor", "Ouled Si Slimane", "Salah Bey", "Tella"]
+    },
+    {
+        "wilaya_code": 20,
+        "wilaya_name": "Saïda",
+        "communes": ["Saida", "Ain El Hadjar", "Ain Sekhouna", "Doui Thabet", "El Hassasna", "Hounet", "Maamora", "Ouled Brahim", "Ouled Khaled", "Sidi Ahmed", "Sidi Amar", "Sidi Boubekeur", "Tircine", "Youb", "Ain Soltane", "Moulay Larbi", "Sidi Ali Benyoub", "Ain El Khabira", "Ouled Brahim"]
+    },
+    {
+        "wilaya_code": 21,
+        "wilaya_name": "Skikda",
+        "communes": ["Skikda", "Ain Bouziane", "Ain Charchar", "Ain Kechra", "Ain Zouit", "Ben Azzouz", "Beni Bechir", "Beni Oulbane", "Beni Zid", "Bouchtata", "Cheraia", "Collo", "Djendel Saadi Mohamed", "El Ghedir", "El Hadaik", "El Harrouch", "El Marsa", "Emdjez Edchich", "Essebt", "Filfila", "Hamadi Krouma", "Kanoua", "Kerkera", "Kheneg Mayoum", "Oued Zehour", "Ouldja Boulballout", "Ouled Attia", "Ouled Hbaba", "Oum Toub", "Ramdane Djamel", "Salah Bouchaour", "Sidi Mezghiche", "Tamalous", "Zerdazas", "Zitouna", "Ain Cherchar", "Bekkouche Lakhdar", "Bin El Ouiden", "Bouhjar", "Chekali", "Echatt", "El Arrouch", "Ouled Hebaba"]
+    },
+    {
+        "wilaya_code": 22,
+        "wilaya_name": "Sidi Bel Abbès",
+        "communes": ["Sidi Bel Abbes", "Ain Adden", "Ain El Berd", "Ain Kada", "Ain Thrid", "Ain Tindamine", "Amarnas", "Badredine El Mokrani", "Belarbi", "Ben Badis", "Bir El Hammam", "Boudjebaa El Bordj", "Bouhanifia", "Chetouane Belaila", "Dhaya", "El Hacaiba", "Hassi Dahou", "Hassi Zehana", "Lamtar", "Makedra", "Marhoum", "M'Cid", "Mekerra", "Merine", "Mezaourou", "Mostefa Ben Brahim", "Moulay Slissen", "Oued Sebaa", "Oued Sefioun", "Oued Taourira", "Ras El Ma", "Redjem Demouche", "Sehala Thaoura", "Sfisef", "Sidi Ali Benyoub", "Sidi Ali Boussidi", "Sidi Brahim", "Sidi Chaib", "Sidi Dahou Debdou", "Sidi Hamadouche", "Sidi Khaled", "Sidi Lahcene", "Sidi Yacoub", "Tabia", "Tafissour", "Taoudmout", "Teghalimet", "Tenira", "Tessala", "Tilmouni", "Zerouala"]
+    },
+    {
+        "wilaya_code": 23,
+        "wilaya_name": "Annaba",
+        "communes": ["Annaba", "El Bouni", "El Hadjar", "Berrahel", "Chetaibi", "Seraidi", "Ain Berda", "Cheurfa", "Oued El Aneb", "Sidi Amar", "Treat", "Ain El Assel", "Bouhadjar", "El Aouana", "Eulma", "Oued Zied", "Sidi Achour", "Bouchetata", "El Kala"]
+    },
+    {
+        "wilaya_code": 24,
+        "wilaya_name": "Guelma",
+        "communes": ["Guelma", "Bouati Mahmoud", "Bou Hachana", "Bou Hamdane", "Boumerdes", "Boumahra Ahmed", "Dahouara", "Djeballah Khemissi", "El Fedjoudj", "Guelaat Bou Sbaa", "Hammam Debagh", "Hammam Maskhoutine", "Hammam N'Bails", "Heliopolis", "Khezara", "Medjez Amar", "Medjez Sfa", "Nechmaya", "Oued Cheham", "Oued Fragha", "Oued Zenati", "Ras El Agba", "Roknia", "Sellaoua Announa", "Tamlouka", "Ain Ben Beida", "Ain Hessania", "Ain Larbi", "Ain Makhlouf", "Ain Reggada", "Ain Sandel", "Belkheir", "Ben Djarah", "Beni Mezline", "Bordj Sabat", "Bou Hamdane", "Bouchegouf", "Boumahra Ahmed", "Dahouara", "Djeballah Khemissi", "El Fedjoudj", "Guelaat Bou Sbaa", "Hammam Debagh", "Hammam Maskhoutine", "Hammam N'Bails", "Heliopolis", "Khezara", "Medjez Amar", "Medjez Sfa", "Nechmaya", "Oued Cheham", "Oued Fragha", "Oued Zenati", "Ras El Agba", "Roknia", "Sellaoua Announa", "Tamlouka"]
+    },
+    {
+        "wilaya_code": 25,
+        "wilaya_name": "Constantine",
+        "communes": ["Constantine", "Ain Abid", "Ain Smara", "Ben Badis", "Didouche Mourad", "El Khroub", "Hamma Bouziane", "Ibn Ziad", "Zighoud Youcef", "Ouled Rahmoune", "Ain Kerma", "Ain Netta", "Ain Sghir", "Ain Touila", "Bellevue", "Benyahia Abderrahmane", "Bir Salah", "Bouhadfane", "Boumerdes", "Chelghoum Laid", "Chihani", "Cirta", "Djebel Ouahche", "El Haria", "El Meridj", "El Mila", "Ferdjioua", "Grarem Gouga", "Hamala", "Ibn Ziad", "Mila", "Oued Athmania", "Oued Endja", "Oued Seguen", "Ouled Djellal", "Ouled Moussa", "Oum El Bouaghi", "Ras El Oued", "Sidi Khelifa", "Sidi Mabrouk", "Sidi Mebrouk", "Tassadane Haddada", "Teleghma", "Tiddis", "Timgad", "Zighoud Youcef"]
+    },
+    {
+        "wilaya_code": 26,
+        "wilaya_name": "Médéa",
+        "communes": ["Medea", "Ain Boucif", "Aissaouia", "Aziz", "Baata", "Benchicao", "Beni Slimane", "Berrouaghia", "Boghar", "Bouaiche", "Bouaichoune", "Bouchrahil", "Boughezoul", "Bouskene", "Chahbounia", "Chellalet El Adhaoura", "Cheniguel", "Derrag", "Djouab", "Draa Essamar", "El Azizia", "El Omaria", "El Guelbelkebir", "Hannacha", "Kef Lakhdar", "Khams Djouamaa", "Ksar El Boukhari", "Maghraoua", "Meftaha", "Mezerana", "Mihoub", "Ouamri", "Oued Harbil", "Ouled Antar", "Ouled Bouachra", "Ouled Deide", "Ouled Hellal", "Ouled Maaref", "Ouzera", "Rebaia", "Saneg", "Sedraia", "Seghouane", "Si Mahdjoub", "Sidi Demed", "Sidi Errabia", "Sidi Naamane", "Sidi Zahar", "Sidi Ziane", "Souagui", "Tablat", "Tafraout", "Tamesguida", "Tizi Mahdi", "Zoubiria"]
+    },
+    {
+        "wilaya_code": 27,
+        "wilaya_name": "Mostaganem",
+        "communes": ["Mostaganem", "Abdelmalek Ramdane", "Achaacha", "Ain Boudinar", "Ain Nouissy", "Ain Sidi Cherif", "Ain Tadles", "Benabdelmalek Ramdane", "Bouguirat", "El Hassaine", "Fornaka", "Hadjadj", "Hadjarret Ennous", "Hassi Mameche", "Kheireddine", "Khobra", "Mansourah", "Mesra", "Nekmaria", "Oued El Kheir", "Ouled Boughalem", "Ouled Maallah", "Safsaf", "Sayada", "Sidi Ali", "Sidi Belattar", "Sidi Lakhdar", "Sirat", "Souaflia", "Sour", "Stidia", "Tazgait", "Touahria", "Ain Sidi Cherif", "Ain Tadles", "Benabdelmalek Ramdane", "Bouguirat", "El Hassaine", "Fornaka", "Hadjadj", "Hadjarret Ennous", "Hassi Mameche", "Kheireddine", "Khobra", "Mansourah", "Mesra", "Nekmaria", "Oued El Kheir", "Ouled Boughalem", "Ouled Maallah", "Safsaf", "Sayada", "Sidi Ali", "Sidi Belattar", "Sidi Lakhdar", "Sirat", "Souaflia", "Sour", "Stidia", "Tazgait", "Touahria"]
+    },
+    {
+        "wilaya_code": 28,
+        "wilaya_name": "M'Sila",
+        "communes": ["M'Sila", "Ain El Hadjel", "Ain El Melh", "Ain Fares", "Ain Khadra", "Ain Rich", "Belaiba", "Ben Srour", "Berhoum", "Bir Foda", "Bou Saada", "Chellal", "Dehahna", "Djebel Messaad", "El Hamel", "El Houamed", "Hammam Dhalaa", "Khettouti Sed El Djir", "Khoubana", "Maadid", "Maarif", "Magra", "Medjedel", "M'Cif", "M'Sila", "Ouanougha", "Ouled Addi Guebala", "Ouled Atia", "Ouled Derradj", "Ouled Madhi", "Ouled Mansour", "Ouled Sidi Brahim", "Oultene", "Sidi Aissa", "Sidi Ameur", "Sidi Hadjeres", "Sidi M'hamed", "Slim", "Souamaa", "Tamsa", "Tarmount", "Zarzour", "Zerarka"]
+    },
+    {
+        "wilaya_code": 29,
+        "wilaya_name": "Mascara",
+        "communes": ["Mascara", "Ain Fares", "Ain Fekan", "Ain Ferah", "Ain Frass", "Alaimia", "Aouf", "Beniane", "Bou Hanifia", "Bou Henni", "Chorfa", "El Bordj", "El Gaada", "El Ghomri", "Ghriss", "Guerdjoum", "Hachem", "El Keurt", "Khalouia", "Makdha", "Maoussa", "Mascara", "Matemore", "Mocta Douz", "Mohammedia", "Nesmoth", "Oggaz", "Oued El Abtal", "Oued Taria", "Ras Ain Amirouche", "Sedjerara", "Sehailia", "Sidi Abdeldjebar", "Sidi Abdelmoumen", "Sidi Boussaid", "Sidi Kada", "Sig", "Tighennif", "Tizi", "Zahana", "Zelameta"]
+    },
+    {
+        "wilaya_code": 30,
+        "wilaya_name": "Ouargla",
+        "communes": ["Ouargla", "Ain Beida", "Benaceur", "Blidet Amor", "El Allia", "El Borma", "El Hadjira", "El Khoub", "Hassi Ben Abdellah", "Hassi Messaoud", "Megarine", "N'Goussa", "Rouissat", "Sidi Khouiled", "Sidi Slimane", "Taibet", "Tebesbest", "Touggourt", "Zaouia El Abidia", "Ain Chouhada", "Balidat Ameur", "Bour El Haicha", "El Borma", "El Hadjira", "Hassi Ben Abdellah", "Hassi Messaoud", "Megarine", "N'Goussa", "Rouissat", "Sidi Khouiled", "Sidi Slimane", "Taibet", "Tebesbest", "Touggourt", "Zaouia El Abidia"]
+    },
+    {
+        "wilaya_code": 31,
+        "wilaya_name": "Oran",
+        "communes": ["Oran", "Ain El Turk", "Arzew", "Ben Freha", "Bethioua", "Bir El Djir", "Boufatis", "Bousfer", "El Ancar", "El Braya", "El Kerma", "Es Senia", "Gdyel", "Hassi Bounif", "Hassi Mefsoukh", "Mers El Kebir", "Misserghin", "Oued Tlelat", "Sidi Benyebka", "Sidi Chami", "Tafraoui", "Ain El Kerma", "Boutlelis", "Hassi Ben Okba", "Messerghin", "Oued Tlelat", "Sidi Benyebka", "Sidi Chami", "Tafraoui"]
+    },
+    {
+        "wilaya_code": 32,
+        "wilaya_name": "El Bayadh",
+        "communes": ["El Bayadh", "Arbaouat", "Boualem", "Bougtoub", "Boussemghoun", "Chellala", "Cheguig", "El Abiodh Sidi Cheikh", "El Bnoud", "El Kheither", "El Mehara", "Ghassoul", "Kef El Ahmar", "Krakda", "Rogassa", "Sidi Ameur", "Sidi Slimane", "Sidi Tifour", "Stitten", "Tousmouline", "Boualem", "Bougtoub", "Boussemghoun", "Chellala", "Cheguig", "El Abiodh Sidi Cheikh", "El Bnoud", "El Kheither", "El Mehara", "Ghassoul", "Kef El Ahmar", "Krakda", "Rogassa", "Sidi Ameur", "Sidi Slimane", "Sidi Tifour", "Stitten", "Tousmouline"]
+    },
+    {
+        "wilaya_code": 33,
+        "wilaya_name": "Illizi",
+        "communes": ["Illizi", "Bordj Omar Driss", "Debdeb", "In Amenas", "In Amenas", "Bordj Omar Driss", "Debdeb"]
+    },
+    {
+        "wilaya_code": 34,
+        "wilaya_name": "Bordj Bou Arreridj",
+        "communes": ["Bordj Bou Arreridj", "Ain Taghrout", "Belimour", "Ben Daoud", "Bir Kasdali", "Bordj Ghdir", "Bordj Zemoura", "Colla", "Djaafra", "El Ach", "El Achir", "El Anseur", "El Hamadia", "El M'hir", "El Main", "Ghilassa", "Haraza", "Hasnaoua", "Khelil", "Ksour", "Mansoura", "Medjana", "Ouled Brahem", "Ouled Dahmane", "Ouled Sidi Brahim", "Rabta", "Ras El Oued", "Sidi Embarek", "Tafreg", "Taglait", "Teniet En Nasr", "Tixter", "Ain Taghrout", "Belimour", "Ben Daoud", "Bir Kasdali", "Bordj Ghdir", "Bordj Zemoura", "Colla", "Djaafra", "El Ach", "El Achir", "El Anseur", "El Hamadia", "El M'hir", "El Main"]
+    },
+        {
+        "wilaya_code": 35,
+        "wilaya_name": "Boumerdès",
+        "communes": ["Boumerdes", "Baghlia", "Bordj Menail", "Boudouaou", "Boudouaou El Bahri", "Bouzegza Keddara", "Chabet El Ameur", "Corso", "Dellys", "Djinet", "El Kharrouba", "Hammedi", "Issers", "Khemis El Khechna", "Larbatache", "Legata", "Naciria", "Ouled Aissa", "Ouled Hedadj", "Ouled Moussa", "Si Mustapha", "Sidi Daoud", "Souk El Had", "Taourga", "Thenia", "Tidjelabine", "Timezrit", "Zemmouri"]
+    },
+    {
+        "wilaya_code": 36,
+        "wilaya_name": "El Tarf",
+        "communes": ["El Tarf", "Ain El Assel", "Ain Kerma", "Asfour", "Ben Mehdi", "Berrihane", "Besbes", "Bouhadjar", "Bouteldja", "Chebaita Mokhtar", "Chefia", "Chihani", "Dréan", "Echatt", "El Aioun", "El Kala", "El Taref", "Hammam Beni Salah", "Lac des Oiseaux", "Oued Zitoun", "Raml Souk", "Souarekh", "Zerizer", "Zitouna"]
+    },
+    {
+        "wilaya_code": 37,
+        "wilaya_name": "Tindouf",
+        "communes": ["Tindouf", "Oum El Assel"]
+    },
+    {
+        "wilaya_code": 38,
+        "wilaya_name": "Tissemsilt",
+        "communes": ["Tissemsilt", "Ammari", "Bordj Bou Naama", "Bordj Emir Abdelkader", "Boucaid", "Khemisti", "Lardjem", "Lazharia", "Maacem", "Melaab", "Ouled Bessem", "Sidi Abed", "Sidi Boutouchent", "Sidi Lantri", "Sidi Slimane", "Tamalaht", "Theniet El Had", "Tissemsilt", "Youssoufia"]
+    },
+    {
+        "wilaya_code": 39,
+        "wilaya_name": "El Oued",
+        "communes": ["El Oued", "Bayadha", "Debila", "Djamaa", "Douar El Ma", "Guemar", "Hassi Khalifa", "Kouinine", "Magrane", "Mih Ouansa", "M'Rara", "Nakhla", "Oued El Alenda", "Oum Touyour", "Ourmes", "Reguiba", "Robbah", "Sidi Amrane", "Sidi Aoun", "Still", "Taghzout", "Taleb Larbi", "Tendla", "Trifaoui"]
+    },
+    {
+        "wilaya_code": 40,
+        "wilaya_name": "Khenchela",
+        "communes": ["Khenchela", "Ain Touila", "Babar", "Baghous", "Bouhmama", "Chelia", "Djellal", "El Hamma", "El Mahmal", "Ensigha", "Fais", "Kaïs", "Khirane", "M'Sara", "M'toussa", "Ouled Rechache", "Remila", "Tamza", "Taouzianat", "Yabous"]
+    },
+    {
+        "wilaya_code": 41,
+        "wilaya_name": "Souk Ahras",
+        "communes": ["Souk Ahras", "Ain Zana", "Bir Bouhouche", "Drea", "Haddada", "Hanencha", "Khedara", "Khemissa", "M'Daourouche", "Mechroha", "Merahna", "Oued Kebrit", "Ouled Driss", "Ouled Moumen", "Oum El Adhaim", "Ragouba", "Safel El Ouiden", "Sedrata", "Sidi Fredj", "Taoura", "Terraguelt", "Tiffech", "Zaarouria"]
+    },
+    {
+        "wilaya_code": 42,
+        "wilaya_name": "Tipaza",
+        "communes": ["Tipaza", "Ahmer El Ain", "Ain Tagourait", "Attatba", "Beni Milleuk", "Bou Ismaïl", "Bouharoun", "Bourkika", "Chaiba", "Cherchell", "Damous", "Douaouda", "Fouka", "Gouraya", "Hadjout", "Khemisti", "Kolea", "Larhat", "Menaceur", "Messelmoun", "Nador", "Sidi Amar", "Sidi Ghiles", "Sidi Rached", "Sidi Semiane"]
+    },
+    {
+        "wilaya_code": 43,
+        "wilaya_name": "Mila",
+        "communes": ["Mila", "Ahmed Rachedi", "Ain Beida Harriche", "Ain Mellouk", "Ain Tine", "Amira Arras", "Benyahia Abderrahmane", "Bouhatem", "Chelghoum Laid", "Chigara", "Derradji Bousselah", "El Ayadi Barbes", "El Mechira", "Ferdjioua", "Grarem Gouga", "Hamala", "Larbaa", "Mila", "Minar Zarza", "Oued Athmenia", "Oued Endja", "Oued Seguen", "Ouled Khalouf", "Rouached", "Sidi Khelifa", "Sidi Merouane", "Tadjenanet", "Tassadane Haddada", "Teleghma", "Terrai Bainen", "Tiberguent", "Yahia Beni Guecha", "Zeghaia"]
+    },
+    {
+        "wilaya_code": 44,
+        "wilaya_name": "Aïn Defla",
+        "communes": ["Ain Defla", "Ain Benian", "Ain Bouyahia", "Ain Lechiakh", "Ain Soltane", "Ain Torki", "Arib", "Bathia", "Belaas", "Ben Allal", "Bir Ould Khelifa", "Bordj Emir Khaled", "Boumedfaa", "Bourached", "Djelida", "Djemaa Ouled Cheikh", "El Abadia", "El Amra", "El Attaf", "El Hassania", "El Maine", "Hammam Righa", "Hoceinia", "Khemis Miliana", "Mekhatria", "Miliana", "Oued Chorfa", "Oued Djemaa", "Rouina", "Sidi Lakhdar", "Tacheta Zougagha", "Tarik Ibn Ziad", "Tiberkanine", "Zeddine"]
+    },
+    {
+        "wilaya_code": 45,
+        "wilaya_name": "Naâma",
+        "communes": ["Naama", "Ain Ben Khelil", "Ain Safra", "Assela", "Djeniane Bourzeg", "El Biod", "Kasdir", "Makman Ben Amer", "Mecheria", "Moghrar", "Naama", "Ouled Khoudir", "Sfissifa", "Tiout", "Ain Sefra", "Mekmen Ben Amar", "Tousnina"]
+    },
+    {
+        "wilaya_code": 46,
+        "wilaya_name": "Aïn Témouchent",
+        "communes": ["Ain Temouchent", "Ain Kihal", "Ain Tolba", "Aoubellil", "Beni Saf", "Bou Zedjar", "Chaabet El Leham", "Chentouf", "El Amria", "El Emir Abdelkader", "El Malah", "El Messaid", "Hammam Bou Hadjar", "Oued Berkeche", "Oued Sabah", "Ouled Boudjemaa", "Ouled Kihal", "Sidi Ben Adda", "Sidi Boumediene", "Sidi Ouriache", "Sidi Safi", "Tamzoura", "Terga"]
+    },
+    {
+        "wilaya_code": 47,
+        "wilaya_name": "Ghardaïa",
+        "communes": ["Ghardaia", "Berriane", "Bounoura", "Dhayet Bendhahoua", "El Atteuf", "El Guerrara", "El Menia", "Metlili", "Sebseb", "Zelfana"]
+    },
+    {
+        "wilaya_code": 48,
+        "wilaya_name": "Relizane",
+        "communes": ["Relizane", "Ain Rahma", "Ain Tarek", "Ammi Moussa", "Belassel Bouzegza", "Bendaoud", "Beni Dergoun", "Beni Zentis", "Dar Ben Abdellah", "Djidiouia", "El Guettar", "El Hamri", "El Hassi", "El Matmar", "El Ouldja", "Had Echkalla", "Kalaa", "Lahlef", "Mazouna", "Mediouna", "Mendes", "Merhoum", "Ouarizane", "Oued El Djemaa", "Oued Essalem", "Ouled Aiche", "Ouled Sidi Mihoub", "Ramka", "Relizane", "Sidi Khettab", "Sidi Lazreg", "Sidi M'hamed Ben Ali", "Sidi M'hamed Ben Aouda", "Yellel", "Zemmoura"]
+    },
+    {
+        "wilaya_code": 49,
+        "wilaya_name": "El M'Ghair",
+        "communes": ["El M'Ghair", "Benaceur", "Djamaa", "El Guefoul", "Oum Touyour", "Sidi Amrane", "Sidi Khellil", "Still", "Taleb Larbi"]
+    },
+    {
+        "wilaya_code": 50,
+        "wilaya_name": "El Menia",
+        "communes": ["El Menia", "Hassi Gara", "Mansoura", "Oued El Djemaa"]
+    },
+    {
+        "wilaya_code": 51,
+        "wilaya_name": "Ouled Djellal",
+        "communes": ["Ouled Djellal", "Besbes", "Doucen", "El Kantara", "Sidi Khaled", "Zeribet El Oued"]
+    },
+    {
+        "wilaya_code": 52,
+        "wilaya_name": "Bordj Badji Mokhtar",
+        "communes": ["Bordj Badji Mokhtar", "Timiaouine"]
+    },
+    {
+        "wilaya_code": 53,
+        "wilaya_name": "Béni Abbès",
+        "communes": ["Beni Abbes", "Igli", "Kerzaz", "Ouled Khoudir", "Tabelbala", "Timoudi"]
+    },
+    {
+        "wilaya_code": 54,
+        "wilaya_name": "Timimoun",
+        "communes": ["Timimoun", "Aougrout", "Charouine", "Deldoul", "Metarfa", "Ouled Said", "Talmine"]
+    },
+    {
+        "wilaya_code": 55,
+        "wilaya_name": "Touggourt",
+        "communes": ["Touggourt", "Blidet Amor", "El Hadjira", "Megarine", "Taibet", "Tebesbest", "Zaouia El Abidia"]
+    },
+    {
+        "wilaya_code": 56,
+        "wilaya_name": "Djanet",
+        "communes": ["Djanet", "Bordj El Haouas"]
+    },
+    {
+        "wilaya_code": 57,
+        "wilaya_name": "In Salah",
+        "communes": ["In Salah", "Foggaret Ezzaouia"]
+    },
+    {
+        "wilaya_code": 58,
+        "wilaya_name": "In Guezzam",
+        "communes": ["In Guezzam", "Tin Zaouatine"]
+    }
+]

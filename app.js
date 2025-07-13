@@ -17,6 +17,7 @@ class AlgeriaWilayasAPI {
         try {
             this.wilayasCommunes = require('./algeria_wilayas_communes.json');
             this.wilayasDelivery = require('./wilayas-delivery.json').wilayas;
+            this.deliveryEstimation = require('./delivery-estimation.json');
         } catch (error) {
             console.error('Error loading data files:', error.message);
             process.exit(1);
@@ -74,6 +75,7 @@ class AlgeriaWilayasAPI {
                     'GET /wilaya/:name': 'Get wilaya details with communes and delivery prices',
                     'GET /wilaya/:name/communes': 'Get communes for a specific wilaya',
                     'GET /wilaya/:name/delivery': 'Get delivery prices for a specific wilaya',
+                    'POST /estimate': 'Estimate delivery cost based on weight, package type, and destination',
                     'GET /health': 'Health check'
                 }
             });
@@ -90,6 +92,9 @@ class AlgeriaWilayasAPI {
 
         // Get delivery prices only for a specific wilaya
         this.app.get('/wilaya/:name/delivery', this.getWilayaDelivery.bind(this));
+
+        // Estimate delivery cost
+        this.app.post('/estimate', this.estimateDeliveryCost.bind(this));
     }
 
     getAllWilayas(req, res) {
@@ -197,6 +202,232 @@ class AlgeriaWilayasAPI {
             });
         } catch (error) {
             this.handleError(res, error, 'Error fetching delivery prices');
+        }
+    }
+
+    estimateDeliveryCost(req, res) {
+        try {
+            const { 
+                wilaya, 
+                weight, 
+                packageType = 'standard', 
+                deliveryOption = 'domicile',
+                quantity = 1,
+                value = 0,
+                recurringCustomer = false
+            } = req.body;
+
+            // Validation des paramètres requis
+            if (!wilaya || !weight) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Paramètres requis manquants. Veuillez fournir: wilaya, weight',
+                    requiredParams: {
+                        wilaya: 'string - nom de la wilaya de destination',
+                        weight: 'number - poids en kg',
+                        packageType: 'string - type de colis (optionnel, défaut: standard)',
+                        deliveryOption: 'string - option de livraison (optionnel, défaut: domicile)',
+                        quantity: 'number - nombre de colis (optionnel, défaut: 1)',
+                        value: 'number - valeur déclarée en DA (optionnel)',
+                        recurringCustomer: 'boolean - client récurrent (optionnel)'
+                    }
+                });
+            }
+
+            // Validation du poids
+            if (weight <= 0 || weight > 50) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Le poids doit être compris entre 0.1 et 50 kg'
+                });
+            }
+
+            // Validation de la quantité
+            if (quantity <= 0 || quantity > 100) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'La quantité doit être comprise entre 1 et 100'
+                });
+            }
+
+            // Rechercher les données de livraison de la wilaya
+            const wilayaName = this.normalizeString(wilaya);
+            const deliveryData = this.findWilayaInDelivery(wilayaName);
+
+            if (!deliveryData) {
+                return res.status(404).json({
+                    success: false,
+                    error: 'Wilaya non trouvée',
+                    availableWilayas: this.wilayasDelivery.map(w => w.name)
+                });
+            }
+
+            // Calcul du coût de base
+            const basePrice = deliveryOption === 'domicile' ? deliveryData.domicile : deliveryData.bureau;
+            
+            if (basePrice === 0 && deliveryOption === 'bureau') {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Service de retrait au bureau non disponible pour cette wilaya'
+                });
+            }
+
+            // Trouver le multiplicateur de poids
+            const weightRange = this.deliveryEstimation.weightRanges.find(range => 
+                weight > range.min && weight <= range.max
+            );
+            
+            if (!weightRange) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Poids trop élevé. Maximum supporté: 50kg'
+                });
+            }
+
+            // Vérifier le type de colis
+            const packageConfig = this.deliveryEstimation.packageTypes[packageType];
+            if (!packageConfig) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Type de colis invalide',
+                    availableTypes: Object.keys(this.deliveryEstimation.packageTypes)
+                });
+            }
+
+            // Vérifier la limite de poids pour le type de colis
+            if (weight > packageConfig.maxWeight) {
+                return res.status(400).json({
+                    success: false,
+                    error: `Poids trop élevé pour le type "${packageType}". Maximum: ${packageConfig.maxWeight}kg`
+                });
+            }
+
+            // Vérifier l'option de livraison
+            const deliveryConfig = this.deliveryEstimation.deliveryOptions[deliveryOption];
+            if (!deliveryConfig) {
+                return res.status(400).json({
+                    success: false,
+                    error: 'Option de livraison invalide',
+                    availableOptions: Object.keys(this.deliveryEstimation.deliveryOptions)
+                });
+            }
+
+            // Calcul du coût unitaire
+            let unitCost = basePrice * weightRange.multiplier * packageConfig.multiplier * deliveryConfig.multiplier;
+
+            // Frais d'emballage
+            const packagingFee = this.deliveryEstimation.additionalFees.packaging[packageType] || 
+                                 this.deliveryEstimation.additionalFees.packaging.standard;
+
+            // Frais de manutention selon le poids
+            let handlingFee = 0;
+            if (weight <= 2) {
+                handlingFee = this.deliveryEstimation.additionalFees.handling.light;
+            } else if (weight <= 10) {
+                handlingFee = this.deliveryEstimation.additionalFees.handling.medium;
+            } else {
+                handlingFee = this.deliveryEstimation.additionalFees.handling.heavy;
+            }
+
+            // Assurance si valeur déclarée
+            let insuranceFee = 0;
+            if (value > 0) {
+                insuranceFee = Math.min(
+                    value * this.deliveryEstimation.additionalFees.insurance.percentage,
+                    this.deliveryEstimation.additionalFees.insurance.maxFee
+                );
+            }
+
+            // Coût total avant réductions
+            let totalCost = (unitCost + packagingFee + handlingFee + insuranceFee) * quantity;
+
+            // Application des réductions de quantité
+            let bulkDiscount = 0;
+            const bulkDiscountConfig = this.deliveryEstimation.discounts.bulk
+                .sort((a, b) => b.minQuantity - a.minQuantity)
+                .find(discount => quantity >= discount.minQuantity);
+            
+            if (bulkDiscountConfig) {
+                bulkDiscount = totalCost * bulkDiscountConfig.discount;
+            }
+
+            // Réduction client récurrent
+            let recurringDiscount = 0;
+            if (recurringCustomer) {
+                recurringDiscount = totalCost * this.deliveryEstimation.discounts.recurring.monthly;
+            }
+
+            // Coût final
+            const finalCost = Math.round(totalCost - bulkDiscount - recurringDiscount);
+
+            // Estimation du délai
+            const estimatedDelay = deliveryData.delai;
+
+            // Réponse détaillée
+            res.json({
+                success: true,
+                data: {
+                    estimation: {
+                        destination: {
+                            wilaya: deliveryData.name,
+                            code: deliveryData.code
+                        },
+                        package: {
+                            weight: weight,
+                            type: packageType,
+                            description: packageConfig.description,
+                            quantity: quantity
+                        },
+                        delivery: {
+                            option: deliveryOption,
+                            description: deliveryConfig.description,
+                            estimatedDelay: estimatedDelay
+                        },
+                        costs: {
+                            basePrice: basePrice,
+                            unitCost: Math.round(unitCost),
+                            packagingFee: packagingFee,
+                            handlingFee: handlingFee,
+                            insuranceFee: Math.round(insuranceFee),
+                            subtotal: Math.round(totalCost),
+                            discounts: {
+                                bulk: Math.round(bulkDiscount),
+                                recurring: Math.round(recurringDiscount),
+                                total: Math.round(bulkDiscount + recurringDiscount)
+                            },
+                            finalCost: finalCost,
+                            currency: 'DA'
+                        },
+                        breakdown: {
+                            weightRange: weightRange.description,
+                            weightMultiplier: weightRange.multiplier,
+                            packageMultiplier: packageConfig.multiplier,
+                            deliveryMultiplier: deliveryConfig.multiplier,
+                            appliedDiscounts: []
+                        }
+                    }
+                }
+            });
+
+            // Ajouter les réductions appliquées au breakdown
+            if (bulkDiscountConfig) {
+                res.locals.estimation.breakdown.appliedDiscounts.push({
+                    type: 'bulk',
+                    description: bulkDiscountConfig.description,
+                    amount: Math.round(bulkDiscount)
+                });
+            }
+
+            if (recurringCustomer) {
+                res.locals.estimation.breakdown.appliedDiscounts.push({
+                    type: 'recurring',
+                    description: 'Client récurrent - réduction mensuelle',
+                    amount: Math.round(recurringDiscount)
+                });
+            }
+
+        } catch (error) {
+            this.handleError(res, error, 'Error calculating delivery estimation');
         }
     }
 

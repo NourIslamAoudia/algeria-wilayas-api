@@ -21,6 +21,7 @@ Une API REST complète pour accéder aux données des wilayas (départements) et
 - 📍 **58 wilayas** complètes avec leurs communes
 - 💰 **Tarifs de livraison** (domicile et bureau)
 - ⏰ **Délais de livraison** estimés
+- 🧮 **Calculateur de coûts** intelligent avec support du poids, type de colis et réductions
 - 🚀 **API REST** rapide et fiable
 - 🔒 **Sécurisée** avec rate limiting
 - 📱 **Compatible CORS** pour les applications web
@@ -63,6 +64,12 @@ GET /wilaya/:name/delivery
 ```
 Retourne uniquement les tarifs de livraison d'une wilaya.
 
+### 7. Estimation des coûts de livraison ✨ NOUVEAU
+```
+POST /estimate
+```
+Estime le coût de livraison en fonction du poids, type de colis, destination et autres paramètres. Idéal pour les e-commerçants !
+
 ## 📖 Exemples d'utilisation
 
 ### JavaScript (Fetch API)
@@ -87,6 +94,24 @@ fetch('https://algeria-wilayas-api-kappa.vercel.app/wilaya/constantine/communes'
 fetch('https://algeria-wilayas-api-kappa.vercel.app/wilaya/oran/delivery')
   .then(response => response.json())
   .then(data => console.log(data));
+
+// Estimer le coût de livraison (NOUVEAU)
+fetch('https://algeria-wilayas-api-kappa.vercel.app/estimate', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    wilaya: 'Alger',
+    weight: 2.5,
+    packageType: 'fragile',
+    deliveryOption: 'domicile',
+    quantity: 1,
+    value: 25000
+  })
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
 ```
 
 ### cURL
@@ -103,6 +128,18 @@ curl https://algeria-wilayas-api-kappa.vercel.app/wilaya/alger/communes
 
 # Tarifs de livraison
 curl https://algeria-wilayas-api-kappa.vercel.app/wilaya/alger/delivery
+
+# Estimation de coût (NOUVEAU)
+curl -X POST https://algeria-wilayas-api-kappa.vercel.app/estimate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "wilaya": "Alger",
+    "weight": 2.5,
+    "packageType": "fragile",
+    "deliveryOption": "domicile",
+    "quantity": 1,
+    "value": 25000
+  }'
 ```
 
 ### Python (requests)
@@ -124,6 +161,18 @@ alger_details = response.json()
 # Obtenir les communes de Blida
 response = requests.get(f"{base_url}/wilaya/blida/communes")
 blida_communes = response.json()
+
+# Estimer le coût de livraison (NOUVEAU)
+estimation_data = {
+    "wilaya": "Alger",
+    "weight": 2.5,
+    "packageType": "fragile",
+    "deliveryOption": "domicile",
+    "quantity": 1,
+    "value": 25000
+}
+response = requests.post(f"{base_url}/estimate", json=estimation_data)
+estimation = response.json()
 ```
 
 ## 📊 Structure des données
@@ -173,6 +222,89 @@ blida_communes = response.json()
       "delai": "24 h"
     }
   }
+}
+```
+
+### Réponse pour `POST /estimate` ✨ NOUVEAU
+```json
+{
+  "success": true,
+  "data": {
+    "estimation": {
+      "destination": {
+        "wilaya": "Alger",
+        "code": "16"
+      },
+      "package": {
+        "weight": 2.5,
+        "type": "fragile",
+        "description": "Colis fragile (protection supplémentaire)",
+        "quantity": 1
+      },
+      "delivery": {
+        "option": "domicile",
+        "description": "Livraison à domicile",
+        "estimatedDelay": "24 h"
+      },
+      "costs": {
+        "basePrice": 400,
+        "unitCost": 780,
+        "packagingFee": 100,
+        "handlingFee": 25,
+        "insuranceFee": 500,
+        "subtotal": 1405,
+        "discounts": {
+          "bulk": 0,
+          "recurring": 0,
+          "total": 0
+        },
+        "finalCost": 1405,
+        "currency": "DA"
+      },
+      "breakdown": {
+        "weightRange": "Lourd (2-5kg)",
+        "weightMultiplier": 2.0,
+        "packageMultiplier": 1.3,
+        "deliveryMultiplier": 1.0,
+        "appliedDiscounts": []
+      }
+    }
+  }
+}
+```
+
+## 🧮 Calculateur de coûts intelligent ✨ NOUVEAU
+
+L'endpoint `POST /estimate` offre un système d'estimation avancé pour les e-commerçants :
+
+### Types de colis supportés
+- **standard** : Colis standard (max 50kg) - Multiplicateur x1.0
+- **fragile** : Protection supplémentaire (max 30kg) - Multiplicateur x1.3
+- **express** : Livraison 24-48h (max 20kg) - Multiplicateur x1.8
+- **valuable** : Assurance incluse (max 25kg) - Multiplicateur x1.5
+- **food** : Transport réfrigéré (max 15kg) - Multiplicateur x1.4
+- **electronic** : Protection antistatique (max 30kg) - Multiplicateur x1.6
+
+### Calculs automatiques
+- **Poids** : Multiplicateurs selon tranches (0.1-50kg)
+- **Frais d'emballage** : 50-150 DA selon le type
+- **Manutention** : 0-50 DA selon le poids
+- **Assurance** : 2% de la valeur déclarée (max 500 DA)
+
+### Réductions appliquées
+- **Quantité** : 5% (5+ colis), 10% (10+ colis), 15% (20+ colis)
+- **Clients récurrents** : 8% (mensuel), 12% (trimestriel), 20% (annuel)
+
+### Paramètres de la requête
+```json
+{
+  "wilaya": "Alger",           // ✅ Obligatoire
+  "weight": 2.5,               // ✅ Obligatoire (en kg)
+  "packageType": "fragile",    // Optionnel (défaut: standard)
+  "deliveryOption": "domicile", // Optionnel (domicile|bureau)
+  "quantity": 1,               // Optionnel (défaut: 1)
+  "value": 25000,              // Optionnel (pour assurance)
+  "recurringCustomer": false   // Optionnel (pour réductions)
 }
 ```
 

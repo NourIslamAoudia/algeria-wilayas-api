@@ -1,0 +1,85 @@
+{
+  "weightRanges": [
+    {"min": 0, "max": 0.5, "multiplier": 1.0, "description": "Très léger (0-500g)"},
+    {"min": 0.5, "max": 1, "multiplier": 1.2, "description": "Léger (500g-1kg)"},
+    {"min": 1, "max": 2, "multiplier": 1.5, "description": "Moyen (1-2kg)"},
+    {"min": 2, "max": 5, "multiplier": 2.0, "description": "Lourd (2-5kg)"},
+    {"min": 5, "max": 10, "multiplier": 2.5, "description": "Très lourd (5-10kg)"},
+    {"min": 10, "max": 20, "multiplier": 3.0, "description": "Extra lourd (10-20kg)"},
+    {"min": 20, "max": 50, "multiplier": 4.0, "description": "Volumineux (20-50kg)"}
+  ],
+  "packageTypes": {
+    "standard": {
+      "multiplier": 1.0,
+      "description": "Colis standard",
+      "maxWeight": 50
+    },
+    "fragile": {
+      "multiplier": 1.3,
+      "description": "Colis fragile (protection supplémentaire)",
+      "maxWeight": 30
+    },
+    "express": {
+      "multiplier": 1.8,
+      "description": "Livraison express (24-48h)",
+      "maxWeight": 20
+    },
+    "valuable": {
+      "multiplier": 1.5,
+      "description": "Colis de valeur (assurance incluse)",
+      "maxWeight": 25
+    },
+    "food": {
+      "multiplier": 1.4,
+      "description": "Produits alimentaires (transport réfrigéré si nécessaire)",
+      "maxWeight": 15
+    },
+    "electronic": {
+      "multiplier": 1.6,
+      "description": "Équipements électroniques (protection antistatique)",
+      "maxWeight": 30
+    }
+  },
+  "deliveryOptions": {
+    "domicile": {
+      "multiplier": 1.0,
+      "description": "Livraison à domicile"
+    },
+    "bureau": {
+      "multiplier": 0.7,
+      "description": "Retrait au bureau/point relais"
+    }
+  },
+  "additionalFees": {
+    "insurance": {
+      "percentage": 0.02,
+      "description": "Assurance (2% de la valeur déclarée)",
+      "maxFee": 500
+    },
+    "packaging": {
+      "standard": 50,
+      "fragile": 100,
+      "valuable": 150,
+      "description": "Frais d'emballage selon le type"
+    },
+    "handling": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 50,
+      "description": "Frais de manutention selon le poids"
+    }
+  },
+  "discounts": {
+    "bulk": [
+      {"minQuantity": 5, "discount": 0.05, "description": "5% de réduction pour 5+ colis"},
+      {"minQuantity": 10, "discount": 0.10, "description": "10% de réduction pour 10+ colis"},
+      {"minQuantity": 20, "discount": 0.15, "description": "15% de réduction pour 20+ colis"}
+    ],
+    "recurring": {
+      "monthly": 0.08,
+      "quarterly": 0.12,
+      "yearly": 0.20,
+      "description": "Réductions pour clients récurrents"
+    }
+  }
+}
